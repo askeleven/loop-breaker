@@ -1,6 +1,7 @@
 {
   "name": "@askeleven/loop-breaker",
-  "version": "0.1.0",
+  "version": "0.1.1",
+  "mcpName": "io.github.askeleven/loop-breaker",
   "description": "Stop your agent replying to an autoresponder, a bounce, or another bot. Checks a thread before every reply for the signs of a loop, on any channel, with an optional ledger across threads. CLI, library, and MCP server. Zero dependencies.",
   "type": "module",
   "license": "MIT",
