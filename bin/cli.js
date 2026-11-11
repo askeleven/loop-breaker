@@ -7,6 +7,7 @@ import { readLedger, recordMessage } from '../src/ledger.js'
 import { formatText, formatClassification } from '../src/report.js'
 import { serve } from '../src/mcp.js'
 import { VERSION } from '../src/version.js'
+import { starHint } from './star-hint.js'
 
 const USAGE = `
 loop-breaker <thread.json | message.eml | ->
@@ -316,6 +317,7 @@ function useColour(values) {
 main(process.argv.slice(2)).then(
   (code) => {
     process.exitCode = code
+    starHint('loop-breaker', code, process.argv.slice(2))
   },
   (error) => {
     process.stderr.write(`${error?.stack ?? error}\n`)
